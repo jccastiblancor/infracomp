@@ -22,7 +22,15 @@ public class BarrierThread extends Thread {
 
     @Override
     public void run() {
+
         //TODO Implementar el proceso del thread
+        if (getThreadId() == "A") {
+            ref.A(this);
+        } else if (getThreadId() == "B") {
+            ref.B(this);
+        } else if (getThreadId() == "C") {
+            ref.C(this);
+        }
         super.run();
     }
 }
